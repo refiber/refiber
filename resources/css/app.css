@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* delete this code bellow, maybe you won't need it */
+
+body {
+  @apply bg-black
+}
+
+.bg-animation:after {
+  content: "";
+  --angle: 0deg;
+  border-radius: 0.6rem;
+  @apply absolute inset-0 z-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false
+}
+
+@keyframes rotate-animation {
+  to {
+      --angle: 360deg
+  }
+}
+
+@supports (background: paint(houdini)) {
+  .bg-animation:after {
+      animation: rotate-animation 3s linear infinite;
+      background: linear-gradient(var(--angle),#ec4899, #407cff,#ec4899,#6366f1);
+  }
+}
