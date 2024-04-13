@@ -39,7 +39,11 @@ export default function HomePage({ hello }: HomePageProps) {
 					</Link>
 				)}
 
-				<a href="#" className="hover:underline hover:text-white w-fit">
+				<a
+					className="hover:underline hover:text-white w-fit"
+					href="https://refiber.notion.site/Refiber-Docs-613336569bcd439ca74c27e30d46a491?pvs=4"
+					target="_blank"
+				>
 					/ docs
 				</a>
 			</div>
