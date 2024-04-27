@@ -2,6 +2,7 @@ import { createPortal } from "react-dom";
 import { useEffect, useState } from "react";
 import { router, usePage } from "@inertiajs/react";
 
+import "css/layout.css";
 import { cn } from "lib/helpers";
 
 /**

@@ -7,7 +7,8 @@
     "skipLibCheck": true,
     "paths": {
       "components/*": ["./resources/js/components/*"],
-      "lib/*": ["./resources/js/lib/*"]
+      "lib/*": ["./resources/js/lib/*"],
+      "css/*": ["./resources/css/*"]
     },
 
     /* Bundler mode */

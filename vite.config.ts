@@ -22,6 +22,10 @@ export default defineConfig({
 				find: "lib",
 				replacement: path.resolve(__dirname, "./resources/js/lib"),
 			},
+			{
+				find: "css",
+				replacement: path.resolve(__dirname, "./resources/css"),
+			},
 		],
 	},
 });
