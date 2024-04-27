@@ -52,6 +52,8 @@ github.com/refiber/framework v0.0.1-beta.1 h1:7DQvCZd3hE5TieLNoCBkXpepkRE9HiaPV0
 github.com/refiber/framework v0.0.1-beta.1/go.mod h1:T7LtGkLoyHYqB8CH3M5U0OmwRUlXJzgF5I96uespDQc=
 github.com/refiber/framework v0.0.1-beta.2 h1:BEldAmYXaW/6sQqsM/wIXwer1YUEOTm4KzgKFN+7jfU=
 github.com/refiber/framework v0.0.1-beta.2/go.mod h1:T7LtGkLoyHYqB8CH3M5U0OmwRUlXJzgF5I96uespDQc=
+github.com/refiber/framework v0.0.2-beta h1:7QUzQ8OskFmxH3n6a7L/q80dDzXjT3V/2Cdyx9bSmmY=
+github.com/refiber/framework v0.0.2-beta/go.mod h1:T7LtGkLoyHYqB8CH3M5U0OmwRUlXJzgF5I96uespDQc=
 github.com/rivo/uniseg v0.2.0 h1:S1pD9weZBuJdFmowNwbpi7BJ8TNftyUImj/0WQi72jY=
 github.com/rivo/uniseg v0.2.0/go.mod h1:J6wj4VEh+S6ZtnVlnTBMWIodfgj8LQOQFoIToxlJtxc=
 github.com/rivo/uniseg v0.4.7 h1:WUdvkW8uEhrYfLC4ZzdpI2ztxP1I582+49Oc5Mq64VQ=
