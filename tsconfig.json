@@ -8,6 +8,7 @@
     "paths": {
       "components/*": ["./resources/js/components/*"],
       "lib/*": ["./resources/js/lib/*"],
+      "types/*": ["./resources/js/types/*"],
       "css/*": ["./resources/css/*"]
     },
 
