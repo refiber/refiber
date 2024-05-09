@@ -9,7 +9,6 @@ import (
 
 	"bykevin.work/refiber/app"
 	"bykevin.work/refiber/routes"
-	"github.com/gofiber/fiber/v2"
 	_ "github.com/joho/godotenv/autoload"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
@@ -33,8 +32,8 @@ func main() {
 		log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stdout}).With().Caller().Logger()
 	}
 
-	refiber, router, support := refiber.New(fiber.Config{
-		DisableStartupMessage: os.Getenv("APP_ENV") == "production",
+	refiber, router, support := refiber.New(refiber.Config{
+		AppName: os.Getenv("APP_NAME"),
 	})
 
 	app := app.New(support)
