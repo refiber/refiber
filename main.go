@@ -4,15 +4,17 @@ import (
 	"context"
 	"os"
 	"os/signal"
+	"time"
 
-	refiber "github.com/refiber/framework"
-
-	"bykevin.work/refiber/app"
-	"bykevin.work/refiber/routes"
+	"github.com/gofiber/storage/badger/v2"
 	_ "github.com/joho/godotenv/autoload"
+	refiber "github.com/refiber/framework"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"github.com/rs/zerolog/pkgerrors"
+
+	"bykevin.work/refiber/app"
+	"bykevin.work/refiber/routes"
 )
 
 func main() {
@@ -32,8 +34,19 @@ func main() {
 		log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stdout}).With().Caller().Logger()
 	}
 
+	/**
+	 * SessionStorage config
+	 * you can also use redis instead: https://docs.gofiber.io/storage
+	 */
+	storage := badger.New(badger.Config{
+		Database:   "./storage/framework/sessions",
+		Reset:      false,
+		GCInterval: 10 * time.Second,
+	})
+
 	refiber, router, support := refiber.New(refiber.Config{
-		AppName: os.Getenv("APP_NAME"),
+		AppName:        os.Getenv("APP_NAME"),
+		SessionStorage: storage,
 	})
 
 	app := app.New(support)
