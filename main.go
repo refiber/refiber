@@ -6,6 +6,7 @@ import (
 	"os/signal"
 	"time"
 
+	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/storage/badger/v2"
 	_ "github.com/joho/godotenv/autoload"
 	refiber "github.com/refiber/framework"
@@ -51,6 +52,10 @@ func main() {
 
 	app := app.New(support)
 	routes.RegisterWeb(router, app)
+
+	refiber.Use(func(c *fiber.Ctx) error {
+		return c.Status(fiber.StatusNotFound).Render("404", nil)
+	})
 
 	go func() {
 		if err := refiber.Listen(":" + os.Getenv("PORT")); err != nil {

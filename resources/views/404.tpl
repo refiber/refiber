@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Refiber</title>
+  <title>Error {{.Code}}</title>
 </head>
 <body>
-  {{inertia .props}}
+  {{.Message}}
 </body>
 </html>
