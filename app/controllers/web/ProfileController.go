@@ -1,9 +1,10 @@
 package web
 
 import (
+	"github.com/gofiber/fiber/v2"
 	support "github.com/refiber/framework/support"
 )
 
-func (web *webController) Profile(s support.Refiber) error {
-	return web.inertia.Render().Page("Profile", nil)
+func (web *webController) Profile(s support.Refiber, c *fiber.Ctx) error {
+	return web.inertia.Render(c).Page("Profile", nil)
 }

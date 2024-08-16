@@ -1,18 +1,19 @@
 package middleware
 
 import (
-	"github.com/refiber/framework/support"
+	"github.com/gofiber/fiber/v2"
 
 	"bykevin.work/refiber/app/models"
-	"github.com/gofiber/fiber/v2"
 )
 
 func (m *middleware) AuthWeb(c *fiber.Ctx) error {
+	auth := m.app.Auth(c)
+
 	var user *models.User
-	m.app.GetAuthenticatedUserSession(&user)
+	auth.GetAuthenticatedUserSession(&user)
 
 	if user == nil {
-		return support.AuthLoginPage("/login", m.app.Refiber)
+		return auth.LoginPage("/login")
 	}
 
 	// Get updated user data from DB, then use m.app.UpdateAuthenticatedUserSession()

@@ -4,8 +4,9 @@ go 1.20
 
 require (
 	github.com/gofiber/storage/badger/v2 v2.0.0
-	github.com/refiber/framework v0.1.0-beta
+	github.com/refiber/framework v0.2.1-beta
 	github.com/rs/zerolog v1.32.0
+	github.com/tommie/v8go v0.17.0
 )
 
 require (
@@ -30,6 +31,12 @@ require (
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/philhofer/fwd v1.1.2 // indirect
 	github.com/tinylib/msgp v1.1.9 // indirect
+	github.com/tommie/v8go/deps/android_amd64 v0.0.0-20240807034838-39b7df0ab20d // indirect
+	github.com/tommie/v8go/deps/android_arm64 v0.0.0-20240807034838-39b7df0ab20d // indirect
+	github.com/tommie/v8go/deps/darwin_amd64 v0.0.0-20240807034838-39b7df0ab20d // indirect
+	github.com/tommie/v8go/deps/darwin_arm64 v0.0.0-20240807034838-39b7df0ab20d // indirect
+	github.com/tommie/v8go/deps/linux_amd64 v0.0.0-20240807034838-39b7df0ab20d // indirect
+	github.com/tommie/v8go/deps/linux_arm64 v0.0.0-20240807034838-39b7df0ab20d // indirect
 	go.opencensus.io v0.24.0 // indirect
 	golang.org/x/crypto v0.23.0 // indirect
 	golang.org/x/net v0.25.0 // indirect
@@ -52,5 +59,5 @@ require (
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.52.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
-	golang.org/x/sys v0.20.0 // indirect
+	golang.org/x/sys v0.22.0 // indirect
 )
