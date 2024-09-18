@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/gofiber/storage/badger/v2 v2.0.0
-	github.com/refiber/framework v0.2.2-beta.1
+	github.com/refiber/framework v0.2.2-beta.2
 	github.com/rs/zerolog v1.32.0
 	github.com/tommie/v8go v0.17.0
 )

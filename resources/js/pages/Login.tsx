@@ -7,8 +7,8 @@ import { cn } from "lib/helpers";
 
 export default function LoginPage() {
   const form = useForm("Auth", {
-    Email: "test@mail",
-    Password: "",
+    email: "test@mail",
+    password: "",
   });
 
   return (
@@ -42,20 +42,20 @@ export default function LoginPage() {
           }}
         >
           <Input
-            name="Email"
+            name="email"
             type="email"
-            defaultValue={form.data.Email}
+            defaultValue={form.data.email}
             placeholder="email"
-            error={form.errors.Email}
-            onChange={(e) => form.setData("Email", e.target.value)}
+            error={form.errors.email}
+            onChange={(e) => form.setData("email", e.target.value)}
           />
 
           <Input
-            name="Password"
+            name="password"
             type="password"
             placeholder="password"
-            error={form.errors.Password}
-            onChange={(e) => form.setData("Password", e.target.value)}
+            error={form.errors.password}
+            onChange={(e) => form.setData("password", e.target.value)}
           />
 
           <button

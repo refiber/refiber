@@ -13,19 +13,15 @@ func (web *webController) Login(s support.Refiber, c *fiber.Ctx) error {
 
 func (web *webController) Auth(s support.Refiber, c *fiber.Ctx) error {
 	type Input struct {
-		Email    string `validate:"required,email"`
-		Password string `validate:"required,min=3"`
+		Email    string `validate:"required,email" json:"email"`
+		Password string `validate:"required,min=3" json:"password"`
 	}
 	input := new(Input)
 
+	c.BodyParser(input)
+
 	redirect := s.Redirect(c)
-
-	if err := c.BodyParser(input); err != nil {
-		return redirect.Back().WithMessage(support.MessageTypeError, "Internal Server Error").Now()
-	}
-
 	validation := s.Validation(c)
-
 	if err := validation.Validate(input); err != nil {
 		return redirect.Back().Now()
 	}
