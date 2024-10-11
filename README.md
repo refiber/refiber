@@ -16,13 +16,13 @@ func (web *webController) Index(s support.Refiber, c *fiber.Ctx) error {
 ```tsx
 // in your React App
 export default function HomePage({ hello }) {
-	return <h1>Hello {hello}</h1>;
+  return <h1>Hello {hello}</h1>;
 }
 ```
 
 ## Documentation
 
-Online documentation [https://refiber.notion.site](https://refiber.notion.site/Refiber-Docs-613336569bcd439ca74c27e30d46a491?pvs=4)
+Online documentation [https://refiber.bykevin.work](https://refiber.bykevin.work)
 
 ## Quick Install
 

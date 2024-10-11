@@ -41,7 +41,7 @@ export default function HomePage({ hello }: HomePageProps) {
 
         <a
           className="hover:underline hover:text-white w-fit"
-          href="https://refiber.notion.site/Refiber-Docs-613336569bcd439ca74c27e30d46a491?pvs=4"
+          href="https://refiber.bykevin.work"
           target="_blank"
         >
           / docs
