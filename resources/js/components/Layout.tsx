@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { router, usePage } from "@inertiajs/react";
 
 import "css/layout.css";
-import { cn } from "@/lib/helpers";
+import { cn } from "@/lib/utils";
 
 /**
  * open AuthController.go to see how flash message is used
@@ -36,7 +36,7 @@ const Toast = () => {
     >
       {message.data?.message}
     </div>,
-    window?.document.getElementById("app")!,
+    window!.document.getElementById("app")!,
   );
 };
 

@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { cn } from "@/lib/helpers";
+import { cn } from "@/lib/utils";
 import { Link, useForm } from "@inertiajs/react";
 import { InputHTMLAttributes, useMemo } from "react";
 
