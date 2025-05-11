@@ -6,7 +6,7 @@ import (
 )
 
 func (web *webController) Index(s support.Refiber, c *fiber.Ctx) error {
-	return web.inertia.Render(c).EnableSSR().Page("Home", &fiber.Map{
+	return web.inertia.Render(c).Page("Home", &fiber.Map{
 		"hello": "World",
 	})
 }
