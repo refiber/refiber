@@ -1,20 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import refiber from "refiber-vite-plugin";
+import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export const alias = [
   {
-    find: "components",
-    replacement: path.resolve(__dirname, "./resources/js/components"),
-  },
-  {
-    find: "lib",
-    replacement: path.resolve(__dirname, "./resources/js/lib"),
-  },
-  {
-    find: "types",
-    replacement: path.resolve(__dirname, "./resources/js/types"),
+    find: "@",
+    replacement: path.resolve(__dirname, "./resources/js"),
   },
   {
     find: "css",
@@ -30,6 +23,7 @@ export default defineConfig({
       refresh: true,
     }),
     react(),
+    tailwindcss(),
   ],
   resolve: { alias },
 });

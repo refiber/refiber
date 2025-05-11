@@ -2,13 +2,12 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
+    "noImplicitAny": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "paths": {
-      "components/*": ["./resources/js/components/*"],
-      "lib/*": ["./resources/js/lib/*"],
-      "types/*": ["./resources/js/types/*"],
+      "@/*": ["./resources/js/*"],
       "css/*": ["./resources/css/*"]
     },
 

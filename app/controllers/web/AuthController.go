@@ -28,12 +28,12 @@ func (web *webController) Auth(s support.Refiber, c *fiber.Ctx) error {
 
 	var errorFields []*support.ValidationErrorField
 	if input.Email != "test@mail.com" {
-		e := support.ValidationErrorField{Name: "Email", Message: "Email not found"}
+		e := support.ValidationErrorField{Name: "email", Message: "Email not found"}
 		errorFields = append(errorFields, &e)
 	}
 
 	if input.Password != "secret" {
-		e := support.ValidationErrorField{Name: "Password", Message: "Invalid password"}
+		e := support.ValidationErrorField{Name: "password", Message: "Invalid password"}
 		errorFields = append(errorFields, &e)
 	}
 

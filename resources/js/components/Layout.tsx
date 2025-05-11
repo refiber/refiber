@@ -3,15 +3,13 @@ import { useEffect, useState } from "react";
 import { router, usePage } from "@inertiajs/react";
 
 import "css/layout.css";
-import { cn } from "lib/helpers";
+import { cn } from "@/lib/helpers";
 
 /**
  * open AuthController.go to see how flash message is used
  * this toast component for demo purpose to use flash message
  */
 const Toast = () => {
-  if (!window) return null;
-
   const { flash } = usePage().props;
 
   const [message, setMessage] = useState<{ data: typeof flash; open: boolean }>(
@@ -27,6 +25,8 @@ const Toast = () => {
     }, 3000);
   }, [flash]);
 
+  if (!window) return null;
+
   return createPortal(
     <div
       className={cn(
@@ -40,7 +40,7 @@ const Toast = () => {
   );
 };
 
-export default function Layout({ children }: any) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   const { auth } = usePage().props;
   return (
     <>

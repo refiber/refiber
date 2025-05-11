@@ -1,26 +1,25 @@
+import Layout from "@/components/Layout";
 import { Link } from "@inertiajs/react";
 
-import Layout from "components/Layout";
-
 export default function ProfilePage() {
-	// const { auth } = usePage().props;
+  // const { auth } = usePage().props;
 
-	return (
-		<div>
-			<div className="text-3xl font-semibold flex">
-				<Link
-					href="/"
-					className="hover:underline hover:text-white text-gray-300 font-normal"
-				>
-					<h2>Refiber</h2>
-				</Link>
-				<div className="mx-3">/</div>
-				<h1>Profile</h1>
-			</div>
+  return (
+    <div>
+      <div className="text-3xl font-semibold flex">
+        <Link
+          href="/"
+          className="hover:underline hover:text-white text-gray-300 font-normal"
+        >
+          <h2>Refiber</h2>
+        </Link>
+        <div className="mx-3">/</div>
+        <h1>Profile</h1>
+      </div>
 
-			<div>TODO</div>
-		</div>
-	);
+      <div>TODO</div>
+    </div>
+  );
 }
 
 ProfilePage.layout = (page: React.ReactNode) => <Layout children={page} />;

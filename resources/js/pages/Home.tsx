@@ -1,6 +1,5 @@
+import Layout from "@/components/Layout";
 import { Link, usePage } from "@inertiajs/react";
-
-import Layout from "components/Layout";
 
 type HomePageProps = {
   hello: string;

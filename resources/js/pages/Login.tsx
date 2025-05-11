@@ -1,9 +1,7 @@
+import Layout from "@/components/Layout";
+import { cn } from "@/lib/helpers";
 import { Link, useForm } from "@inertiajs/react";
 import { InputHTMLAttributes, useMemo } from "react";
-
-import Layout from "components/Layout";
-
-import { cn } from "lib/helpers";
 
 export default function LoginPage() {
   const form = useForm("Auth", {
